@@ -1,5 +1,12 @@
 // express is the server that forms part of the nodejs program
 var express = require('express');
+
+app.use(function(req, res, next) {    
+res.header("Access-Control-Allow-Origin", "*");    
+res.header("Access-Control-Allow-Headers", "X-Requested-With");    
+next();  
+});
+
 var app = express();
 
 // serve static files - e.g. html, css
