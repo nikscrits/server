@@ -2,6 +2,14 @@
 var express = require('express');
 var path = require("path");
 var app = express();
+var bodyParser = require('body-parser');
+
+
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
+app.use(bodyParser.json());
+
 
 	// adding functionality to allow cross-domain queries when PhoneGap is running a server
 	app.use(function(req, res, next) {
@@ -12,6 +20,35 @@ var app = express();
 	});
 
 	
+app.post('/uploadData',function(req,res){
+       // note that we are using POST here as we are uploading data
+       // so the parameters form part of the BODY of the request rather than the RESTful API
+       console.dir(req.body);
+       pool.connect(function(err,client,done) {
+             if(err){
+             console.log("not able to get connection "+ err);
+             res.status(400).send(err);
+             }
+
+            // pull the geometry component together
+            // note that well known text requires the points as longitude/latitude !
+            // well known text should look like: 'POINT(-71.064544 42.28787)'
+            var geometrystring = "st_geomfromtext('POINT(" + req.body.long + " " + req.body.lat + ")'";
+
+             var querystring = "INSERT into quizquestions (point_name,question,answer1,answer2,answer3,answer4,correct_answer,coordinates) values ('";
+             querystring = querystring + req.body.pointname + "','" + req.body.question + "','" + req.body.answer1+"','" + req.body.answer2+"','" + req.body.answer3+"','" + req.body.answer4+"','" + req.body.correctanswer+"'," + geometrystring +"))";
+             console.log(querystring);
+             client.query( querystring,function(err,result) {
+          done();
+          if(err){
+               console.log(err);
+               res.status(400).send(err);
+          }
+          res.status(200).send("row inserted");
+       });
+}); });
+
+
 	// adding functionality to log the requests
 	app.use(function (req, res, next) {
 		var filename = path.basename(req.url);
