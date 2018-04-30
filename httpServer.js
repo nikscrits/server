@@ -86,7 +86,7 @@ var pool = new pg.Pool(config);
 console.log(config);
 
 
-app.get('/getPOI', function (req,res) {
+app.get('/getQuestions', function (req,res) {
      pool.connect(function(err,client,done) {
        if(err){
            console.log("not able to get connection "+ err);
@@ -97,9 +97,9 @@ app.get('/getPOI', function (req,res) {
         // note that query needs to be a single string with no line breaks so built it up bit by bit
 
         	var querystring = " SELECT 'FeatureCollection' As type, array_to_json(array_agg(f)) As features  FROM ";
-        	querystring = querystring + "(SELECT 'Feature' As type     , ST_AsGeoJSON(lg.geom)::json As geometry, ";
-        	querystring = querystring + "row_to_json((SELECT l FROM (SELECT id, name, category) As l      )) As properties";
-        	querystring = querystring + "   FROM united_kingdom_poi  As lg limit 100  ) As f ";
+        	querystring = querystring + "(SELECT 'Feature' As type     , ST_AsGeoJSON(lg.coordinates)::json As geometry, ";
+        	querystring = querystring + "row_to_json((SELECT l FROM (SELECT point_name, question) As l      )) As properties";
+        	querystring = querystring + "   FROM quizquestions  As lg limit 100  ) As f ";
         	console.log(querystring);
         	client.query(querystring,function(err,result){
 
