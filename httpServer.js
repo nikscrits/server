@@ -204,7 +204,7 @@ app.post('/uploadAnswerData',function(req,res){
 
 
              var querystring = "INSERT into quizanswers (question,answer,answer_value,answer_correct) values ('";
-             querystring = querystring + req.body.question + "','" + req.body.answer+"','" + req.body.answer_value+"','" + req.body.answer_correct+")";
+             querystring = querystring + req.body.question + "','" + req.body.answer+"','" + req.body.answer_value+"','" + req.body.answer_correct+"')";
              console.log(querystring);
              client.query( querystring,function(err,result) {
           done();
