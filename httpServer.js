@@ -189,6 +189,33 @@ app.get('/getGeoJSON/:tablename/:geomcolumn', function (req,res) {
 	});
 
 	
+
+
+
+app.post('/uploadAnswerData',function(req,res){
+       // note that we are using POST here as we are uploading data
+       // so the parameters form part of the BODY of the request rather than the RESTful API
+       console.dir(req.body);
+       pool.connect(function(err,client,done) {
+             if(err){
+             console.log("not able to get connection "+ err);
+             res.status(400).send(err);
+             }
+
+
+             var querystring = "INSERT into quizanswers (question,answer,answer_value,answer_correct) values ('";
+             querystring = querystring + req.body.question + "','" + req.body.answer+"','" + req.body.answer_value+"','" + req.body.answer_correct+"')";
+             console.log(querystring);
+             client.query( querystring,function(err,result) {
+          done();
+          if(err){
+               console.log(err);
+               res.status(400).send(err);
+          }
+          res.status(200).send("row inserted");
+       });
+}); });
+
 	
 // the / indicates the path that you type into the server - in this case, what happens when you type in:  http://developer.cege.ucl.ac.uk:32560/xxxxx/xxxxx
   app.get('/:name1', function (req, res) {
