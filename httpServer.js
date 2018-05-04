@@ -44,7 +44,7 @@ app.post('/uploadData',function(req,res){
                console.log(err);
                res.status(400).send(err);
           }
-          res.status(200).send("row inserted");
+          res.status(200).send("Answer sent to database!");
        });
 }); });
 
