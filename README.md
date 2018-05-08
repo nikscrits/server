@@ -15,13 +15,10 @@ This system comprises of two applications:  **a mobile application** and **a web
 
 This mobile application was developed for an Android mobile device with the following specifications, therefore running the application on a device with a lower spec may be supported but is not recommended.
 
-|  |  |
-|--|--|
-| Display size | 5", LCD touchscreen, 720 x 1280 pixels|
-|OS|Android 6.1 (Marshmallow)|
-| RAM | 1 GB|
-| GPS | Yes|
-
+>Display size - 5", LCD touchscreen, 720x1280 pixels
+> OS  - Android 6.1 (Marshmallow)
+> RAM - 1 GB
+>  GPS - Yes
 
 ### Setup and Run the Mobile Application
 
