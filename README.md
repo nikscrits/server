@@ -12,17 +12,21 @@ This system comprises of two applications:  **a mobile application** and **a web
 
 <p align="center"><img src="https://github.com/nikscrits/server/blob/master/screenshots/mobapp.png" width="500"></p>
 
+### Target Audience
+
+This part of the system is designed for an end user with an andorid device who enjoys quizes! The application's simple interface should make it appropriate for users of any age or experience level. 
+
 ### Technical Requirements
 
 This mobile application was developed for an Android mobile device with the following specifications ([full spec](https://www.gsmarena.com/motorola_moto_g_(3rd_gen)-7247.php)), therefore running the application on a device with a lower spec may be supported but is not recommended.
 
 >Display size - 5", LCD touchscreen, 720x1280 pixels
 
-> OS  - Android 6.1 (Marshmallow)
+>OS  - Android 6.1 (Marshmallow)
 
-> RAM - 1 GB
+>RAM - 1 GB
 
->  GPS - Yes
+>GPS - Yes
 
 ### Setup and Running the Mobile Application
 
@@ -36,17 +40,22 @@ cd server
 ```
 node httpServer.js &
 ```
+4. Open the application on the android device.
 
 ## The Web Application
 [The web application](https://github.com/nikscrits/questions) is the administrator interface where questions can be set for the users to answer. It can be accessed from [this link](https://http://developer.cege.ucl.ac.uk:31288/) when both the httpServer.js (found in this repository) and the phonegap server (found in the web application repository) are running. The user help guide for the web application can be found as a html page [here](https://rawgit.com/nikscrits/questions/master/userguide/Questions%20User%20Guide.html).
 
 <p align="center"><img src="https://github.com/nikscrits/server/blob/master/screenshots/webapp.png" width="500"></p>
 
+### Target Audience
+
+This part of the system is designed for the administrator of the quiz to set questions for the users to answer on the mobile application. The webpage's simple interface should make it appropriate for users of any age or experience level. 
+
 ### Technical Requirements
 
 This web application was developed using the Google Chrome browser. It was additionally tested using the Safari and Mozilla Firefox browsers. Therefore, running the application on another web browser may be supported but is not recommended.
 
-### Setup and Run the Web Application
+### Setup and Running the Web Application
 
  1. Clone the web application repository:
 ```
@@ -66,6 +75,7 @@ node httpServer.js &
 cd ucesncr
 phonegap serve
 ```
+5. Use [this link](https://http://developer.cege.ucl.ac.uk:31288/) to open the webpage.
 
 ## The Server
 In order for both the applications to successfully function, a connection to a database is required where the questions and answer data will be saved. The httpServer.js found in this repository facilitates this connection.
