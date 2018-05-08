@@ -1,5 +1,6 @@
 
 
+
 # Location Based Quiz
 
 This repository contains the code for the server that is required to run the Location Based Quiz system that was created for the module ['Web and Mobile GIS - Apps and Programming'](https://sp.cege.ucl.ac.uk/study/Pages/Module-Guide.aspx?ModileCd=CEGEG077) at University College London.
@@ -13,7 +14,7 @@ This system comprises of two applications:  **a mobile application** and **a web
 
 ### Technical Requirements
 
-This mobile application was developed for an Android mobile device with the following specifications, therefore running the application on a device with a lower spec may be supported but is not recommended.
+This mobile application was developed for an Android mobile device with the following specifications ([full spec](https://www.gsmarena.com/motorola_moto_g_(3rd_gen)-7247.php)), therefore running the application on a device with a lower spec may be supported but is not recommended.
 
 >Display size - 5", LCD touchscreen, 720x1280 pixels
 
