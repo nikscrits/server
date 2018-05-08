@@ -9,7 +9,7 @@ This system comprises of two applications:  **a mobile application** and **a web
 ## The Mobile Application
 [The mobile application](https://github.com/nikscrits/quiz) is the user interface for the system where the user can track their location and answer nearby questions. It can be downloaded to an android phone using [this link](https://build.phonegap.com/apps/3152351/builds). The user help guide for the mobile application can be found  as a html page [here](https://rawgit.com/nikscrits/quiz/master/userguide/Quiz%20User%20Guide.html).
 
-<div style="text-align:center"><img src="https://github.com/nikscrits/server/blob/master/screenshots/mobapp.png" width="500"></div>
+<p align="center"><img src="https://github.com/nikscrits/server/blob/master/screenshots/mobapp.png" width="500"></p>
 
 ### Technical Requirements
 
@@ -31,7 +31,7 @@ This mobile application was developed for an Android mobile device with the foll
 ## The Web Application
 [The web application](https://github.com/nikscrits/questions) is the administrator interface where questions can be set for the users to answer. It can be accessed from [this link](https://http://developer.cege.ucl.ac.uk:31288/) when both the httpServer.js (found in this repository) and the phonegap server (found in the web application repository) are running. The user help guide for the web application can be found as a html page [here](https://rawgit.com/nikscrits/questions/master/userguide/Questions%20User%20Guide.html).
 
-<div style="text-align:center"><img src="https://github.com/nikscrits/server/blob/master/screenshots/webapp.png" width="500"></div>
+<p align="center"><img src="https://github.com/nikscrits/server/blob/master/screenshots/webapp.png" width="600"></p>
 
 ### Technical Requirements
 
