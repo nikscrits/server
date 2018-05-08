@@ -1,4 +1,5 @@
 
+
 # Location Based Quiz
 
 This repository contains the code for the server that is required to run the Location Based Quiz system that was created for the module ['Web and Mobile GIS - Apps and Programming'](https://sp.cege.ucl.ac.uk/study/Pages/Module-Guide.aspx?ModileCd=CEGEG077) at University College London.
@@ -10,15 +11,31 @@ This system comprises of two applications:  **a mobile application** and **a web
 
 <img src="https://github.com/nikscrits/server/blob/master/screenshots/mobapp.png" width="500">
 
-### Setup and Run the Web Application
+### Technical Requirements
 
-1. Download the application on an android device using [this link](https://build.phonegap.com/apps/3152351/builds).
+This mobile application was developed for an Android mobile device with the following specifications, therefore running the application on a device with a lower spec may be supported but is not recommended.
+
+|  |  |
+|--|--|
+| Display size | 5", LCD touchscreen, 720 x 1280 pixels|
+|OS|Android 6.1 (Marshmallow)|
+| RAM | 1 GB|
+| GPS | Yes|
+
+
+### Setup and Run the Mobile Application
+
+1. Download the application on a suitable android device using [this link](https://build.phonegap.com/apps/3152351/builds).
 3. Run the httpServer.js as shown in the section below.
 
 ## The Web Application
 [The web application](https://github.com/nikscrits/questions) is the administrator interface where questions can be set for the users to answer. It can be accessed from [this link](https://http://developer.cege.ucl.ac.uk:31288/) when both the httpServer.js (found in this repository) and the phonegap server (found in the web application repository) are running. The user help guide for the web application can be found as a html page [here](https://rawgit.com/nikscrits/questions/master/userguide/Questions%20User%20Guide.html).
 
 <img src="https://github.com/nikscrits/server/blob/master/screenshots/webapp.png" width="500">
+
+### Technical Requirements
+
+This web application was developed using the Google Chrome browser. It was additionally tested using the Safari and Mozilla Firefox browsers. Therefore, running the application on another web browser may be supported but is not recommended.
 
 ### Setup and Run the Web Application
 
@@ -33,6 +50,7 @@ cd ucesncr
 phonegap serve
 ```
 3. Run the httpServer.js as shown in the section below.
+
 ## The Server
 In order for both the applications to successfully function, a connection to a database is required where the questions and answer data will be saved. The httpServer.js found in this repository facilitates this connection.
 
