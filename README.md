@@ -10,7 +10,7 @@ This system comprises of two applications:  **a mobile application** and **a web
 ## The Mobile Application
 [The mobile application](https://github.com/nikscrits/quiz) is the user interface for the system where the user can track their location and answer nearby questions. It can be downloaded to an android phone using [this link](https://build.phonegap.com/apps/3152351/builds). The user help guide for the mobile application can be found  as a html page [here](https://rawgit.com/nikscrits/quiz/master/userguide/Quiz%20User%20Guide.html).
 
-<p align="center"><img src="https://github.com/nikscrits/server/blob/master/screenshots/mobapp.png" width="500"></p>
+<div style="text-align:center"><img src="https://github.com/nikscrits/server/blob/master/screenshots/mobapp.png" width="500"></div>
 
 ### Technical Requirements
 
@@ -24,15 +24,23 @@ This mobile application was developed for an Android mobile device with the foll
 
 >  GPS - Yes
 
-### Setup and Run the Mobile Application
+### Setup and Running the Mobile Application
 
-1. Download the application on a suitable android device using [this link](https://build.phonegap.com/apps/3152351/builds).
-3. Run the httpServer.js as shown in the section below.
+1. Download the application on a suitable android device using the QR code found [here](https://github.com/nikscrits/server/blob/master/screenshots/QRcode.png) or via the phonegap website using [this link](https://build.phonegap.com/apps/3152351/builds).
+2. Navigate to the httpServer.js location or if not already done, clone this server repository:
+```
+git clone https://github.com/nikscrits/server
+cd server
+```
+3. Run the server in the background:
+```
+node httpServer.js &
+```
 
 ## The Web Application
 [The web application](https://github.com/nikscrits/questions) is the administrator interface where questions can be set for the users to answer. It can be accessed from [this link](https://http://developer.cege.ucl.ac.uk:31288/) when both the httpServer.js (found in this repository) and the phonegap server (found in the web application repository) are running. The user help guide for the web application can be found as a html page [here](https://rawgit.com/nikscrits/questions/master/userguide/Questions%20User%20Guide.html).
 
-<p align="center"><img src="https://github.com/nikscrits/server/blob/master/screenshots/webapp.png" width="600"></p>
+<div style="text-align:center"><img src="https://github.com/nikscrits/server/blob/master/screenshots/webapp.png" width="500"></div>
 
 ### Technical Requirements
 
@@ -40,17 +48,24 @@ This web application was developed using the Google Chrome browser. It was addit
 
 ### Setup and Run the Web Application
 
- 1. Clone the repository:
+ 1. Clone the web application repository:
 ```
 git clone https://github.com/nikscrits/questions
-cd questions
 ```
-2. Run the phonegap server:
+2. Navigate to the httpServer.js location or if not already done, clone this server repository:
+```
+git clone https://github.com/nikscrits/server
+cd server
+```
+3. Run the server in the background:
+```
+node httpServer.js &
+```
+4. Navigate back to the 'ucesncr' file within questions. Run the phonegap server:
 ```
 cd ucesncr
 phonegap serve
 ```
-3. Run the httpServer.js as shown in the section below.
 
 ## The Server
 In order for both the applications to successfully function, a connection to a database is required where the questions and answer data will be saved. The httpServer.js found in this repository facilitates this connection.
