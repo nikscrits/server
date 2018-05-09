@@ -43,7 +43,7 @@ node httpServer.js &
 4. Open the application on the android device.
 
 ## The Web Application
-[The web application](https://github.com/nikscrits/questions) is the administrator interface where questions can be set for the users to answer. It can be accessed from [this link](https://http://developer.cege.ucl.ac.uk:31288/) when both the httpServer.js (found in this repository) and the phonegap server (found in the web application repository) are running. The user help guide for the web application can be found as a html page [here](https://rawgit.com/nikscrits/questions/master/userguide/Questions%20User%20Guide.html) or as a PDF file [here](https://github.com/nikscrits/questions/blob/master/userguide/Questions%20User%20Guide%20PDF.pdf).
+[The web application](https://github.com/nikscrits/questions) is the administrator interface where questions can be set for the users to answer. It can be accessed from [this link](https://http://developer.cege.ucl.ac.uk:31288/) when both the httpServer.js (found in this repository) and the phonegap server (found in the web application repository) are running. The user help guide for the web application can be found as a html page [here](https://rawgit.com/nikscrits/questions/master/ucesncr/www/webuserguide.html) or as a PDF file [here](https://github.com/nikscrits/questions/blob/master/userguide/Questions%20User%20Guide%20PDF.pdf).
 
 <p align="center"><img src="https://github.com/nikscrits/server/blob/master/screenshots/webapp.png" width="500"></p>
 
